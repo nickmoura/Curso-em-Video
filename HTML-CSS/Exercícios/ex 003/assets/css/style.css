@@ -1,0 +1,11 @@
+body {
+	background-color: lightsalmon;
+}
+
+img {
+	border: black;
+	border-style: solid;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: lightskyblue;
+}

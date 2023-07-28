@@ -1,3 +1,3 @@
-# Guanabara
+# Curso em vídeo
 
 Repositório criado para as aulas, exercícios e desafios do Curso em Vídeo do Professor Gustavo Guanabara.

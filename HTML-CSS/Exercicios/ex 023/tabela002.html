@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tabelas</title>
+	<style>
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+			width: 100vw;
+			height: 100vh;
+			top: 0;
+			left: 0;
+			background-image: url(mapa-brasil.jpg);
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+
+		table {
+			width: 25vw;
+			height: 50vw;
+			border-collapse: collapse;
+		}
+
+		h1 {
+			text-align: center;
+			width: 25vw;
+			background-color: lightgray;
+			color: black;
+			font-size: 1em;
+		}
+
+		td,
+		th {
+			border: 1px solid black;
+			padding: 1px;
+			text-align: center;
+			font-size: 0.75em;
+		}
+
+		caption {
+			font-size: 1em;
+			font-weight: bold;
+			padding: 1px;
+			background-color: lightgrey;
+			border: 1px solid black;
+		}
+
+		thead,
+		tfoot {
+			background-color: gray;
+			color: white;
+		}
+
+		tbody tr:nth-child(odd) {
+			background-color: white;
+		}
+
+		tbody tr:nth-child(even) {
+			background-color: lightgray;
+		}
+
+		.background {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-image: url(mapa-brasil.jpg);
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Uso de tabelas grandes</h1>
+	<!--
+		Anatomia para tabelas grandes
+		TABLE
+			CAPTION
+			THEAD
+				TR, TD, TH
+			TBODY
+				TR, TD, TH
+			TFOOT
+				TR, TD, TH
+	-->
+	<table>
+		<caption>População das Unidades Federativas do Brasil</caption>
+		<thead>
+			<tr>
+				<th scope="col" style="width: 50%;">UF</th>
+				<th scope="col" style="width: 50%">População</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>São Paulo</td>
+				<td class="num">45 919 049</td>
+			</tr>
+			<tr>
+				<td>Minas Gerais</td>
+				<td class="num">21 168 791</td>
+			</tr>
+			<tr>
+				<td>Rio de Janeiro</td>
+				<td class="num">17 264 943</td>
+			</tr>
+			<tr>
+				<td>Bahia</td>
+				<td class="num">14 873 064</td>
+			</tr>
+			<tr>
+				<td>Paraná</td>
+				<td class="num">11 433 957</td>
+			</tr>
+			<tr>
+				<td>Rio Grande do Sul</td>
+				<td class="num">11 377 239</td>
+			</tr>
+			<tr>
+				<td>Pernambuco</td>
+				<td class="num">9 557 071</td>
+			</tr>
+			<tr>
+				<td>Ceará</td>
+				<td class="num">9 132 078</td>
+			</tr>
+			<tr>
+				<td>Pará</td>
+				<td class="num">8 602 865</td>
+			</tr>
+			<tr>
+				<td>Santa Catarina</td>
+				<td class="num">7 164 788</td>
+			</tr>
+			<tr>
+				<td>Maranhão</td>
+				<td class="num">7 075 181</td>
+			</tr>
+			<tr>
+				<td>Goiás</td>
+				<td class="num">7 018 354</td>
+			</tr>
+			<tr>
+				<td>Amazonas</td>
+				<td class="num">4 144 597</td>
+			</tr>
+			<tr>
+				<td>Espírito Santo</td>
+				<td class="num">4 018 650</td>
+			</tr>
+			<tr>
+				<td>Paraíba</td>
+				<td class="num">4 018 127</td>
+			</tr>
+			<tr>
+				<td>Rio Grande do Norte</td>
+				<td class="num">3 596 853</td>
+			</tr>
+			<tr>
+				<td>Mato Grosso</td>
+				<td class="num">3 484 466</td>
+			</tr>
+			<tr>
+				<td>Alagoas</td>
+				<td class="num">3 337 357</td>
+			</tr>
+			<tr>
+				<td>Piauí</td>
+				<td class="num">3 273 227</td>
+			</tr>
+			<tr>
+				<td>Distrito Federal</td>
+				<td class="num">3 015 268</td>
+			</tr>
+			<tr>
+				<td>Mato Grosso do Sul</td>
+				<td class="num">2 778 986</td>
+			</tr>
+			<tr>
+				<td>Sergipe</td>
+				<td class="num">2 298 696</td>
+			</tr>
+			<tr>
+				<td>Rondônia</td>
+				<td class="num">1 777 225</td>
+			</tr>
+			<tr>
+				<td>Tocantins</td>
+				<td class="num">1 572 866</td>
+			</tr>
+			<tr>
+				<td>Acre</td>
+				<td class="num">881 935</td>
+			</tr>
+			<tr>
+				<td>Amapá</td>
+				<td class="num">845 731</td>
+			</tr>
+			<tr>
+				<td>Roraima</td>
+				<td class="num">605 761</td>
+			</tr>
+		<tfoot>
+			<tr>
+				<th>Total de habitantes</th>
+				<td>210 147 125</td>
+			</tr>
+		</tfoot>
+		</tbody>
+	</table>
+</body>
+
+</html>

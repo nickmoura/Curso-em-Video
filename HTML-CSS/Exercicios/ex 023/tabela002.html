@@ -8,19 +8,23 @@
 	<style>
 		body {
 			font-family: Arial, Helvetica, sans-serif;
-			width: 100vw;
-			height: 100vh;
+			width: 100%;
+			height: 100%;
 			top: 0;
 			left: 0;
-			background-image: url(mapa-brasil.jpg);
-			background-size: cover;
-			background-position: center;
-			background-repeat: no-repeat;
+			margin: 0;
 		}
+
+		main {
+			display: flex;
+			gap: 1%;
+		}
+		
 
 		table {
 			width: 25vw;
-			height: 50vw;
+			height: 75vw;
+			font-size: 1.25rem;
 			border-collapse: collapse;
 		}
 
@@ -54,6 +58,12 @@
 			color: white;
 		}
 
+		thead > tr > th {
+			position: sticky;
+			top: -1px;
+			background-color: gray;
+		}
+
 		tbody tr:nth-child(odd) {
 			background-color: white;
 		}
@@ -62,18 +72,12 @@
 			background-color: lightgray;
 		}
 
-		.background {
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-image: url(mapa-brasil.jpg);
-			background-size: cover;
-			background-position: center;
-			background-repeat: no-repeat;
+		img {
+			max-width: 100%;
+		}
+
+		p {
+			text-align: justify;
 		}
 	</style>
 </head>
@@ -91,131 +95,155 @@
 			TFOOT
 				TR, TD, TH
 	-->
-	<table>
-		<caption>População das Unidades Federativas do Brasil</caption>
-		<thead>
-			<tr>
-				<th scope="col" style="width: 50%;">UF</th>
-				<th scope="col" style="width: 50%">População</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>São Paulo</td>
-				<td class="num">45 919 049</td>
-			</tr>
-			<tr>
-				<td>Minas Gerais</td>
-				<td class="num">21 168 791</td>
-			</tr>
-			<tr>
-				<td>Rio de Janeiro</td>
-				<td class="num">17 264 943</td>
-			</tr>
-			<tr>
-				<td>Bahia</td>
-				<td class="num">14 873 064</td>
-			</tr>
-			<tr>
-				<td>Paraná</td>
-				<td class="num">11 433 957</td>
-			</tr>
-			<tr>
-				<td>Rio Grande do Sul</td>
-				<td class="num">11 377 239</td>
-			</tr>
-			<tr>
-				<td>Pernambuco</td>
-				<td class="num">9 557 071</td>
-			</tr>
-			<tr>
-				<td>Ceará</td>
-				<td class="num">9 132 078</td>
-			</tr>
-			<tr>
-				<td>Pará</td>
-				<td class="num">8 602 865</td>
-			</tr>
-			<tr>
-				<td>Santa Catarina</td>
-				<td class="num">7 164 788</td>
-			</tr>
-			<tr>
-				<td>Maranhão</td>
-				<td class="num">7 075 181</td>
-			</tr>
-			<tr>
-				<td>Goiás</td>
-				<td class="num">7 018 354</td>
-			</tr>
-			<tr>
-				<td>Amazonas</td>
-				<td class="num">4 144 597</td>
-			</tr>
-			<tr>
-				<td>Espírito Santo</td>
-				<td class="num">4 018 650</td>
-			</tr>
-			<tr>
-				<td>Paraíba</td>
-				<td class="num">4 018 127</td>
-			</tr>
-			<tr>
-				<td>Rio Grande do Norte</td>
-				<td class="num">3 596 853</td>
-			</tr>
-			<tr>
-				<td>Mato Grosso</td>
-				<td class="num">3 484 466</td>
-			</tr>
-			<tr>
-				<td>Alagoas</td>
-				<td class="num">3 337 357</td>
-			</tr>
-			<tr>
-				<td>Piauí</td>
-				<td class="num">3 273 227</td>
-			</tr>
-			<tr>
-				<td>Distrito Federal</td>
-				<td class="num">3 015 268</td>
-			</tr>
-			<tr>
-				<td>Mato Grosso do Sul</td>
-				<td class="num">2 778 986</td>
-			</tr>
-			<tr>
-				<td>Sergipe</td>
-				<td class="num">2 298 696</td>
-			</tr>
-			<tr>
-				<td>Rondônia</td>
-				<td class="num">1 777 225</td>
-			</tr>
-			<tr>
-				<td>Tocantins</td>
-				<td class="num">1 572 866</td>
-			</tr>
-			<tr>
-				<td>Acre</td>
-				<td class="num">881 935</td>
-			</tr>
-			<tr>
-				<td>Amapá</td>
-				<td class="num">845 731</td>
-			</tr>
-			<tr>
-				<td>Roraima</td>
-				<td class="num">605 761</td>
-			</tr>
-		<tfoot>
-			<tr>
-				<th>Total de habitantes</th>
-				<td>210 147 125</td>
-			</tr>
-		</tfoot>
-		</tbody>
-	</table>
+	<main>
+		<section class="tabela">
+			<table>
+				<caption>População das Unidades Federativas do Brasil</caption>
+				<thead>
+					<tr>
+						<th scope="col" style="width: 50%;">UF</th>
+						<th scope="col" style="width: 50%">População</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>São Paulo</td>
+						<td class="num">45 919 049</td>
+					</tr>
+					<tr>
+						<td>Minas Gerais</td>
+						<td class="num">21 168 791</td>
+					</tr>
+					<tr>
+						<td>Rio de Janeiro</td>
+						<td class="num">17 264 943</td>
+					</tr>
+					<tr>
+						<td>Bahia</td>
+						<td class="num">14 873 064</td>
+					</tr>
+					<tr>
+						<td>Paraná</td>
+						<td class="num">11 433 957</td>
+					</tr>
+					<tr>
+						<td>Rio Grande do Sul</td>
+						<td class="num">11 377 239</td>
+					</tr>
+					<tr>
+						<td>Pernambuco</td>
+						<td class="num">9 557 071</td>
+					</tr>
+					<tr>
+						<td>Ceará</td>
+						<td class="num">9 132 078</td>
+					</tr>
+					<tr>
+						<td>Pará</td>
+						<td class="num">8 602 865</td>
+					</tr>
+					<tr>
+						<td>Santa Catarina</td>
+						<td class="num">7 164 788</td>
+					</tr>
+					<tr>
+						<td>Maranhão</td>
+						<td class="num">7 075 181</td>
+					</tr>
+					<tr>
+						<td>Goiás</td>
+						<td class="num">7 018 354</td>
+					</tr>
+					<tr>
+						<td>Amazonas</td>
+						<td class="num">4 144 597</td>
+					</tr>
+					<tr>
+						<td>Espírito Santo</td>
+						<td class="num">4 018 650</td>
+					</tr>
+					<tr>
+						<td>Paraíba</td>
+						<td class="num">4 018 127</td>
+					</tr>
+					<tr>
+						<td>Rio Grande do Norte</td>
+						<td class="num">3 596 853</td>
+					</tr>
+					<tr>
+						<td>Mato Grosso</td>
+						<td class="num">3 484 466</td>
+					</tr>
+					<tr>
+						<td>Alagoas</td>
+						<td class="num">3 337 357</td>
+					</tr>
+					<tr>
+						<td>Piauí</td>
+						<td class="num">3 273 227</td>
+					</tr>
+					<tr>
+						<td>Distrito Federal</td>
+						<td class="num">3 015 268</td>
+					</tr>
+					<tr>
+						<td>Mato Grosso do Sul</td>
+						<td class="num">2 778 986</td>
+					</tr>
+					<tr>
+						<td>Sergipe</td>
+						<td class="num">2 298 696</td>
+					</tr>
+					<tr>
+						<td>Rondônia</td>
+						<td class="num">1 777 225</td>
+					</tr>
+					<tr>
+						<td>Tocantins</td>
+						<td class="num">1 572 866</td>
+					</tr>
+					<tr>
+						<td>Acre</td>
+						<td class="num">881 935</td>
+					</tr>
+					<tr>
+						<td>Amapá</td>
+						<td class="num">845 731</td>
+					</tr>
+					<tr>
+						<td>Roraima</td>
+						<td class="num">605 761</td>
+					</tr>
+				<tfoot>
+					<tr>
+						<th>Total de habitantes</th>
+						<td>210 147 125</td>
+					</tr>
+				</tfoot>
+				</tbody>
+			</table>
+		</section>
+		<section class="imagem">
+			<img src="mapa-brasil.jpg" alt="Mapa do Brasil" srcset="">
+		</section>
+	</main>
+	<aside>
+		<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore assumenda illum sapiente dolorem ratione, inventore, perspiciatis deleniti alias rerum doloremque qui libero accusamus? Quod quibusdam odio sed dolor assumenda hic.</p>
+		<p>Maiores eligendi modi rem dicta a, iure dolorem minima soluta veritatis neque velit corrupti sit, rerum non sunt voluptate ducimus qui distinctio fugit ullam. Mollitia cumque deserunt officiis corporis unde.</p>
+		<p>Eos temporibus voluptate ex quasi quos rem, reiciendis doloribus error ipsum ipsa expedita ab, mollitia obcaecati asperiores nesciunt nam consequuntur eligendi. Rem distinctio corporis consequatur placeat velit accusamus aut corrupti?</p>
+		<p>Necessitatibus labore possimus saepe sequi voluptatum nobis pariatur modi totam natus ut omnis quisquam, quasi, eveniet soluta fugiat quam doloribus consequuntur facere! Dolorem minus deserunt sapiente excepturi fuga, consequuntur cupiditate!</p>
+		<p>Explicabo maiores natus accusamus, consequatur sit quaerat, repudiandae blanditiis magnam dicta eaque saepe quae eos? Odio voluptas natus, in temporibus consectetur non, obcaecati accusamus voluptatum ipsa facere quis! Necessitatibus, aliquid?</p>
+		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem commodi labore omnis, libero nostrum excepturi maxime modi qui nihil facere laborum alias reiciendis amet beatae at enim? Vitae, temporibus architecto!</p>
+		<p>Iste ducimus delectus quae excepturi maiores sint nesciunt! Esse odio eum velit quae corrupti cumque omnis optio reiciendis laudantium animi! Doloribus non incidunt amet molestiae quisquam tempore officia nulla numquam.</p>
+		<p>Explicabo, earum ipsum minus esse odio aliquid atque praesentium eveniet veritatis, nemo modi. Mollitia quia suscipit ratione officia totam soluta magnam! Quas eum sint maxime at non voluptas sapiente modi.</p>
+		<p>Expedita nam id illum autem esse labore blanditiis adipisci repellendus aliquam facere, vero neque nesciunt magni dolore voluptate voluptas unde itaque officiis quos nemo reprehenderit veritatis nobis. Quis, aperiam deserunt!</p>
+		<p>Animi, nobis fugit quibusdam accusamus placeat quidem, eos culpa doloribus minima, natus mollitia! Sit enim recusandae quae earum porro ipsa, ea culpa dolor soluta non nostrum distinctio fuga eos perferendis?</p>
+		<p>Repellendus, reprehenderit illo corporis harum cupiditate soluta, perspiciatis dolorem inventore consequuntur assumenda pariatur nostrum beatae? Ut a laborum similique repudiandae sapiente! Vero minus, vitae placeat aspernatur dolorem iste quisquam similique?</p>
+		<p>Ab quibusdam architecto optio porro nesciunt dolores eligendi dicta error molestiae quia labore veritatis ratione ipsam cupiditate tempore ea nemo delectus esse possimus odio, id accusantium corporis ipsum! Velit, aperiam.</p>
+		<p>Esse illum eaque corrupti consequatur ducimus est culpa natus minima voluptas distinctio, nemo, commodi ipsa sapiente! Dolor porro blanditiis ipsum omnis unde repellat vero fugiat distinctio qui ullam, voluptate sapiente.</p>
+		<p>Consequatur non repellat eligendi voluptatem exercitationem alias doloremque aliquid minima, libero eum dolores totam aut blanditiis quae, unde maxime aperiam. Atque culpa tempora quos excepturi quasi, quam vero debitis et.</p>
+		<p>Esse velit, quis repellendus quod excepturi unde cupiditate tempora possimus numquam enim inventore nihil dolor repudiandae neque animi optio! Nam eveniet impedit vero libero fugit dignissimos est molestiae earum necessitatibus?</p>
+	</aside>
 </body>
 
 </html>
